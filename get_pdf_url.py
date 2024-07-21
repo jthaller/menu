@@ -17,11 +17,11 @@ def get_latest_commit_sha(repo, branch='main'):
     sys.exit(1)
 
 def get_pdf_url(latest_commit_hash: str) -> str:
-    return f"https://raw.githubusercontent.com/jthaller/resume_url_hosting/{latest_commit_hash}/Jeremy_Thaller_Resume.pdf"
+    return f"https://raw.githubusercontent.com/jthaller/menu/{latest_commit_hash}/cocktail_menu.pdf"
 
 
 if __name__ == "__main__":
-    repo = "jthaller/resume_url_hosting"
+    repo = "jthaller/menu"
     latest_commit_hash = get_latest_commit_sha(repo)
     pdf_url = get_pdf_url(latest_commit_hash)
     print(pdf_url)  # Print the PDF URL to capture it in the GitHub Actions workflow
